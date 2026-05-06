@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Background -->
+  <rect width="64" height="64" fill="white"/>
+  
+  <!-- Railway Track (bottom half) -->
+  <g id="railway">
+    <!-- Left rail -->
+    <line x1="12" y1="40" x2="52" y2="40" stroke="black" stroke-width="3"/>
+    <!-- Right rail -->
+    <line x1="12" y1="48" x2="52" y2="48" stroke="black" stroke-width="3"/>
+    <!-- Ties -->
+    <line x1="18" y1="40" x2="18" y2="48" stroke="black" stroke-width="1.5"/>
+    <line x1="26" y1="40" x2="26" y2="48" stroke="black" stroke-width="1.5"/>
+    <line x1="34" y1="40" x2="34" y2="48" stroke="black" stroke-width="1.5"/>
+    <line x1="42" y1="40" x2="42" y2="48" stroke="black" stroke-width="1.5"/>
+    <line x1="50" y1="40" x2="50" y2="48" stroke="black" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Airplane (top half) -->
+  <g id="airplane">
+    <!-- Fuselage -->
+    <ellipse cx="32" cy="16" rx="6" ry="10" fill="black"/>
+    <!-- Wings -->
+    <rect x="10" y="14" width="44" height="4" fill="black"/>
+    <!-- Tail -->
+    <polygon points="32,24 28,30 36,30" fill="black"/>
+    <!-- Cockpit window -->
+    <circle cx="32" cy="10" r="2" fill="white"/>
+  </g>
+  
+  <!-- Center divider line -->
+  <line x1="0" y1="32" x2="64" y2="32" stroke="black" stroke-width="1.5"/>
+</svg>
