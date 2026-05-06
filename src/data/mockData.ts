@@ -73,8 +73,8 @@ const carriers = {
   ],
 };
 
-const flightAmenities = ["Wi-Fi", "Power", "Meal", "Entertainment", "Lie-flat"];
-const trainAmenities = ["Wi-Fi", "Power", "Café Car", "Quiet Zone", "Bike Storage"];
+const flightAmenities = ["Wi-Fi", "Power", "Meal", "Entertainment", "Extra Legroom"];
+const trainAmenities = ["Wi-Fi", "Charging Point", "Pantry Car", "Bedroll", "AC Coach"];
 
 function hash(s: string) {
   let h = 0;
@@ -102,15 +102,16 @@ export function generateTrips(
   for (let i = 0; i < count; i++) {
     const seed = seedBase + i * 97;
     const c = pick(cs, seed);
-    const departMin = 5 * 60 + ((seed * 17) % (16 * 60));
-    const baseDur = kind === "flight" ? 90 + ((seed * 11) % 720) : 60 + ((seed * 13) % 480);
+    const departMin = 4 * 60 + ((seed * 17) % (18 * 60));
+    const baseDur = kind === "flight" ? 75 + ((seed * 11) % 240) : 240 + ((seed * 13) % 1320);
     const arriveMin = departMin + baseDur;
     const stops = kind === "flight" ? (seed % 5 === 0 ? 1 : 0) : 0;
     const cabinList: Trip["cabin"][] =
       kind === "flight" ? ["Economy", "Business", "First"] : ["Standard", "Premium"];
     const cabin = pick(cabinList, seed);
-    const cabinMult = cabin === "Economy" || cabin === "Standard" ? 1 : cabin === "Premium" || cabin === "Business" ? 2.4 : 4.2;
-    const price = Math.round((40 + (baseDur / 60) * 35 + (seed % 80)) * cabinMult);
+    const cabinMult = cabin === "Economy" || cabin === "Standard" ? 1 : cabin === "Premium" || cabin === "Business" ? 2.6 : 4.5;
+    const basePrice = kind === "flight" ? 2800 + (baseDur / 60) * 1400 + (seed % 1500) : 450 + (baseDur / 60) * 90 + (seed % 400);
+    const price = Math.round(basePrice * cabinMult);
     list.push({
       id: `${kind}-${c.prefix}${100 + i}-${from}-${to}-${date}`,
       kind,
