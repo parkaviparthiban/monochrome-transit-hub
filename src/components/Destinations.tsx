@@ -1,10 +1,10 @@
 const items = [
-  { city: "Tokyo", code: "HND", note: "Neon & quiet temples", from: 612 },
-  { city: "Paris", code: "CDG", note: "Light, of course", from: 248 },
-  { city: "Zürich", code: "ZUR", note: "Alpine arrival", from: 132 },
-  { city: "New York", code: "JFK", note: "The skyline rule", from: 320 },
-  { city: "Singapore", code: "SIN", note: "Equatorial precision", from: 740 },
-  { city: "Rome", code: "ROM", note: "By rail, slowly", from: 89 },
+  { city: "Jaipur", code: "JAI", note: "The pink city, by air or rail", from: 2499 },
+  { city: "Goa", code: "GOI", note: "Coastline & quiet mornings", from: 3299 },
+  { city: "Varanasi", code: "VNS", note: "Ghats at first light", from: 3899 },
+  { city: "Srinagar", code: "SXR", note: "Dal Lake, in winter", from: 5499 },
+  { city: "Kochi", code: "COK", note: "Backwaters, slowly", from: 4299 },
+  { city: "Darjeeling", code: "DJL", note: "Tea & toy trains", from: 1899 },
 ];
 
 export default function Destinations() {
@@ -27,7 +27,7 @@ export default function Destinations() {
               <div className="rule-soft my-6 group-hover:border-background/30" />
               <div className="flex items-end justify-between">
                 <span className="mono text-[10px] uppercase tracking-[0.2em]">From</span>
-                <span className="display text-3xl">${it.from}</span>
+                <span className="display text-3xl">₹{it.from.toLocaleString("en-IN")}</span>
               </div>
             </article>
           ))}
