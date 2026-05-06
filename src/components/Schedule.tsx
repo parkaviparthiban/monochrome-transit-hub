@@ -1,11 +1,11 @@
 const rows = [
-  ["07:15", "MA204", "JFK → LHR", "Boarding", "A12"],
-  ["08:02", "CR118", "PAR → AMS", "On Time", "—"],
-  ["08:45", "NL339", "CDG → FRA", "Delayed 12m", "B07"],
-  ["09:10", "VL422", "ZUR → MIL", "On Time", "—"],
-  ["09:55", "AS601", "DXB → SIN", "On Time", "C03"],
-  ["10:30", "IL280", "BER → VIE", "On Time", "—"],
-  ["11:15", "PS118", "SFO → HND", "Boarding", "G21"],
+  ["06:15", "6E 204", "DEL → BOM", "Boarding", "A12"],
+  ["07:02", "VB 118", "NDLS → LKO", "On Time", "—"],
+  ["07:45", "AI 339", "BLR → DEL", "Delayed 12m", "B07"],
+  ["08:10", "RJ 422", "CSMT → ADI", "On Time", "—"],
+  ["08:55", "UK 601", "HYD → MAA", "On Time", "C03"],
+  ["09:30", "SH 280", "NDLS → BPL", "On Time", "—"],
+  ["10:15", "QP 118", "GOI → BLR", "Boarding", "G21"],
 ];
 
 export default function Schedule() {

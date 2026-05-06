@@ -61,7 +61,7 @@ export default function ResultsList({
             </label>
             {ceiling > 0 && (
               <label className="hidden md:flex items-center gap-2">
-                Max ${maxPrice || ceiling}
+                Max ₹{(maxPrice || ceiling).toLocaleString("en-IN")}
                 <input type="range" min={50} max={ceiling} value={maxPrice || ceiling} onChange={(e) => setMaxPrice(+e.target.value)} className="accent-foreground w-32" />
               </label>
             )}
@@ -112,7 +112,7 @@ export default function ResultsList({
 
               <div className="col-span-6 md:col-span-3 flex items-center justify-end gap-4">
                 <div className="text-right">
-                  <div className="display text-3xl leading-none">${t.price}</div>
+                  <div className="display text-3xl leading-none">₹{t.price.toLocaleString("en-IN")}</div>
                   <div className="mono text-[10px] uppercase tracking-[0.2em] text-muted-foreground mt-1">{t.cabin} · per pax</div>
                 </div>
                 <button onClick={() => onSelect(t)} className="btn-ink">

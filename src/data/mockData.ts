@@ -2,29 +2,39 @@ export type Airport = { code: string; city: string; name: string };
 export type Station = { code: string; city: string; name: string };
 
 export const airports: Airport[] = [
-  { code: "JFK", city: "New York", name: "John F. Kennedy" },
-  { code: "LHR", city: "London", name: "Heathrow" },
-  { code: "CDG", city: "Paris", name: "Charles de Gaulle" },
-  { code: "HND", city: "Tokyo", name: "Haneda" },
-  { code: "DXB", city: "Dubai", name: "Dubai Intl" },
-  { code: "SFO", city: "San Francisco", name: "SFO Intl" },
-  { code: "SIN", city: "Singapore", name: "Changi" },
-  { code: "FRA", city: "Frankfurt", name: "Frankfurt am Main" },
-  { code: "BOM", city: "Mumbai", name: "Chhatrapati Shivaji" },
-  { code: "SYD", city: "Sydney", name: "Kingsford Smith" },
+  { code: "DEL", city: "New Delhi", name: "Indira Gandhi Intl" },
+  { code: "BOM", city: "Mumbai", name: "Chhatrapati Shivaji Maharaj" },
+  { code: "BLR", city: "Bengaluru", name: "Kempegowda Intl" },
+  { code: "MAA", city: "Chennai", name: "Chennai Intl" },
+  { code: "CCU", city: "Kolkata", name: "Netaji Subhas Chandra Bose" },
+  { code: "HYD", city: "Hyderabad", name: "Rajiv Gandhi Intl" },
+  { code: "COK", city: "Kochi", name: "Cochin Intl" },
+  { code: "GOI", city: "Goa", name: "Dabolim" },
+  { code: "AMD", city: "Ahmedabad", name: "Sardar Vallabhbhai Patel" },
+  { code: "PNQ", city: "Pune", name: "Pune Intl" },
+  { code: "JAI", city: "Jaipur", name: "Jaipur Intl" },
+  { code: "LKO", city: "Lucknow", name: "Chaudhary Charan Singh" },
+  { code: "IXC", city: "Chandigarh", name: "Chandigarh Intl" },
+  { code: "SXR", city: "Srinagar", name: "Sheikh ul-Alam Intl" },
+  { code: "GAU", city: "Guwahati", name: "Lokpriya Gopinath Bordoloi" },
 ];
 
 export const stations: Station[] = [
-  { code: "PAR", city: "Paris", name: "Gare du Nord" },
-  { code: "LDN", city: "London", name: "St. Pancras" },
-  { code: "BRU", city: "Brussels", name: "Bruxelles-Midi" },
-  { code: "AMS", city: "Amsterdam", name: "Amsterdam Centraal" },
-  { code: "BER", city: "Berlin", name: "Hauptbahnhof" },
-  { code: "ROM", city: "Rome", name: "Roma Termini" },
-  { code: "MAD", city: "Madrid", name: "Atocha" },
-  { code: "ZUR", city: "Zürich", name: "Zürich HB" },
-  { code: "VIE", city: "Vienna", name: "Wien Hbf" },
-  { code: "MIL", city: "Milan", name: "Milano Centrale" },
+  { code: "NDLS", city: "New Delhi", name: "New Delhi Railway Station" },
+  { code: "CSMT", city: "Mumbai", name: "Chhatrapati Shivaji Terminus" },
+  { code: "MAS", city: "Chennai", name: "Chennai Central" },
+  { code: "HWH", city: "Kolkata", name: "Howrah Junction" },
+  { code: "SBC", city: "Bengaluru", name: "KSR Bengaluru" },
+  { code: "SC", city: "Hyderabad", name: "Secunderabad Junction" },
+  { code: "PUNE", city: "Pune", name: "Pune Junction" },
+  { code: "ADI", city: "Ahmedabad", name: "Ahmedabad Junction" },
+  { code: "JP", city: "Jaipur", name: "Jaipur Junction" },
+  { code: "LKO", city: "Lucknow", name: "Lucknow Charbagh" },
+  { code: "BPL", city: "Bhopal", name: "Bhopal Junction" },
+  { code: "BBS", city: "Bhubaneswar", name: "Bhubaneswar" },
+  { code: "TVC", city: "Trivandrum", name: "Thiruvananthapuram Central" },
+  { code: "ERS", city: "Kochi", name: "Ernakulam Junction" },
+  { code: "CDG", city: "Chandigarh", name: "Chandigarh Junction" },
 ];
 
 export type Trip = {
@@ -46,22 +56,25 @@ export type Trip = {
 
 const carriers = {
   flight: [
-    { name: "Meridian Air", prefix: "MA", craft: "Boeing 787" },
-    { name: "Northline", prefix: "NL", craft: "Airbus A350" },
-    { name: "Atlas Sky", prefix: "AS", craft: "Boeing 777" },
-    { name: "Pole Star", prefix: "PS", craft: "Airbus A320neo" },
-    { name: "Cardinal", prefix: "CD", craft: "Boeing 737 MAX" },
+    { name: "IndiGo", prefix: "6E", craft: "Airbus A320neo" },
+    { name: "Air India", prefix: "AI", craft: "Boeing 787" },
+    { name: "Vistara", prefix: "UK", craft: "Airbus A321neo" },
+    { name: "SpiceJet", prefix: "SG", craft: "Boeing 737 MAX" },
+    { name: "Akasa Air", prefix: "QP", craft: "Boeing 737 MAX 8" },
+    { name: "Air India Express", prefix: "IX", craft: "Boeing 737-800" },
   ],
   train: [
-    { name: "Continental Rail", prefix: "CR" },
-    { name: "Northbound Express", prefix: "NX" },
-    { name: "Iron Line", prefix: "IL" },
-    { name: "Velocity", prefix: "VL" },
+    { name: "Vande Bharat Express", prefix: "VB" },
+    { name: "Rajdhani Express", prefix: "RJ" },
+    { name: "Shatabdi Express", prefix: "SH" },
+    { name: "Duronto Express", prefix: "DR" },
+    { name: "Tejas Express", prefix: "TJ" },
+    { name: "Garib Rath", prefix: "GR" },
   ],
 };
 
-const flightAmenities = ["Wi-Fi", "Power", "Meal", "Entertainment", "Lie-flat"];
-const trainAmenities = ["Wi-Fi", "Power", "Café Car", "Quiet Zone", "Bike Storage"];
+const flightAmenities = ["Wi-Fi", "Power", "Meal", "Entertainment", "Extra Legroom"];
+const trainAmenities = ["Wi-Fi", "Charging Point", "Pantry Car", "Bedroll", "AC Coach"];
 
 function hash(s: string) {
   let h = 0;
@@ -89,15 +102,16 @@ export function generateTrips(
   for (let i = 0; i < count; i++) {
     const seed = seedBase + i * 97;
     const c = pick(cs, seed);
-    const departMin = 5 * 60 + ((seed * 17) % (16 * 60));
-    const baseDur = kind === "flight" ? 90 + ((seed * 11) % 720) : 60 + ((seed * 13) % 480);
+    const departMin = 4 * 60 + ((seed * 17) % (18 * 60));
+    const baseDur = kind === "flight" ? 75 + ((seed * 11) % 240) : 240 + ((seed * 13) % 1320);
     const arriveMin = departMin + baseDur;
     const stops = kind === "flight" ? (seed % 5 === 0 ? 1 : 0) : 0;
     const cabinList: Trip["cabin"][] =
       kind === "flight" ? ["Economy", "Business", "First"] : ["Standard", "Premium"];
     const cabin = pick(cabinList, seed);
-    const cabinMult = cabin === "Economy" || cabin === "Standard" ? 1 : cabin === "Premium" || cabin === "Business" ? 2.4 : 4.2;
-    const price = Math.round((40 + (baseDur / 60) * 35 + (seed % 80)) * cabinMult);
+    const cabinMult = cabin === "Economy" || cabin === "Standard" ? 1 : cabin === "Premium" || cabin === "Business" ? 2.6 : 4.5;
+    const basePrice = kind === "flight" ? 2800 + (baseDur / 60) * 1400 + (seed % 1500) : 450 + (baseDur / 60) * 90 + (seed % 400);
+    const price = Math.round(basePrice * cabinMult);
     list.push({
       id: `${kind}-${c.prefix}${100 + i}-${from}-${to}-${date}`,
       kind,

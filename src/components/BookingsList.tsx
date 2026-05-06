@@ -57,7 +57,7 @@ export default function BookingsList() {
                   <div><div className="eyebrow">Ref</div><div className="display text-lg">{b.ref}</div></div>
                   <div><div className="eyebrow">Seat</div><div className="display text-lg">{b.seat}</div></div>
                   <div><div className="eyebrow">Date</div><div className="mono text-xs mt-1">{b.date}</div></div>
-                  <div className="text-right"><div className="eyebrow">Paid</div><div className="display text-lg">${b.total}</div></div>
+                  <div className="text-right"><div className="eyebrow">Paid</div><div className="display text-lg">₹{b.total.toLocaleString("en-IN")}</div></div>
                 </div>
               </li>
             ))}
