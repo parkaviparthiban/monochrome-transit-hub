@@ -97,7 +97,7 @@ export default function BookingFlow({
             </div>
             <div className="md:text-right">
               <div className="eyebrow mb-1">Total · {passengers} pax</div>
-              <div className="display text-4xl">${total}</div>
+              <div className="display text-4xl">₹{total.toLocaleString("en-IN")}</div>
               <div className="mono text-[11px] uppercase tracking-[0.2em] mt-2">{date}</div>
             </div>
           </div>
@@ -144,7 +144,7 @@ export default function BookingFlow({
               <div><div className="eyebrow">Reference</div><div className="display text-2xl">{(window as any).__lastRef || ""}</div></div>
               <div><div className="eyebrow">Seat</div><div className="display text-2xl">{seat}</div></div>
               <div><div className="eyebrow">Passenger</div><div className="display text-xl">{name}</div></div>
-              <div><div className="eyebrow">Total</div><div className="display text-2xl">${total}</div></div>
+              <div><div className="eyebrow">Total</div><div className="display text-2xl">₹{total.toLocaleString("en-IN")}</div></div>
             </div>
             <button onClick={onClose} className="btn-ink mt-8">Done</button>
           </div>
