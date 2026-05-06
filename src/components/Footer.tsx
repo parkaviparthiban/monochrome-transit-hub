@@ -3,8 +3,8 @@ export default function Footer() {
     <footer className="bg-background">
       <div className="px-6 md:px-10 py-12 max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mono text-[11px] uppercase tracking-[0.18em]">
         <div>
-          <div className="eyebrow mb-3">Meridian&Rail</div>
-          <p className="text-muted-foreground normal-case tracking-normal font-sans text-sm">A reservation house for the considered traveller. Founded MMXXVI.</p>
+          <div className="eyebrow mb-3">BharatRail&Air</div>
+          <p className="text-muted-foreground normal-case tracking-normal font-sans text-sm">A reservation house for the considered Indian traveller. Founded MMXXVI.</p>
         </div>
         <div>
           <div className="eyebrow mb-3">Sections</div>
