@@ -8,6 +8,7 @@ import BookingsList from "@/components/BookingsList";
 import Destinations from "@/components/Destinations";
 import Schedule from "@/components/Schedule";
 import Footer from "@/components/Footer";
+import ChatBot from "@/components/ChatBot";
 import { Trip, generateTrips } from "@/data/mockData";
 import { Booking } from "@/lib/bookingStore";
 import { toast } from "@/hooks/use-toast";
@@ -49,6 +50,7 @@ const Index = () => {
       <Schedule />
       <BookingsList />
       <Footer />
+      <ChatBot />
       {active && query && (
         <BookingFlow
           trip={active}
